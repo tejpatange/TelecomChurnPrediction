@@ -27,11 +27,10 @@ This project is a Flask-based API for predicting customer churn using a stacked 
 ```
 .
 ├── app.py                  # Flask API definition
-├── model.pkl               # Trained stacking model
-├── feature_engineering.pkl # Feature engineering function
+├── stacking_model.pkl      # Trained stacking model
 ├── requirements.txt        # Python dependencies
-├── new_data.csv            # Sample test file
-├── test_request.py         # Example usage of API
+├── Kaggle Telecom dataset  # Sample test file
+├── request.py              # Example usage of API
 └── README.md               # Project documentation
 ```
 
@@ -44,18 +43,6 @@ Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
-
-Example `requirements.txt`:
-
-```
-flask
-pandas
-numpy
-scikit-learn
-xgboost
-joblib
-```
-
 ---
 
 ## 🛠️ Run the API Locally
@@ -86,15 +73,7 @@ Or from other devices on LAN using your local IP.
 
 Use the provided script:
 
-```python
-import requests
-
-url = "http://127.0.0.1:5000/predict"
-with open("new_data.csv", "rb") as f:
-    files = {'file': f}
-    response = requests.post(url, files=files)
-
-print(response.json())
+```request.py
 ```
 
 ---
@@ -117,12 +96,12 @@ print(response.json())
 
 ## 👨‍💻 Author
 
-- Your Name
-- Contact: [your.email@example.com](mailto\:your.email@example.com)
+- Tejas Patange
+- Contact: [tejpatange@gmail.com](mailto\:tejpatange@gmail.com)
 
 ---
 
 ## 📈 Conclusion
 
-The stacking model delivered the best generalization performance and was selected as the production model. This API is production-ready and can be extended to support more formats or models.
+The stacking model delivered the best generalization performance and was selected as the prediction model. This API can be extended to support more formats or models.
 
