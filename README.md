@@ -71,10 +71,7 @@ Or from other devices on LAN using your local IP.
 
 ## 🧪 Testing the API
 
-Use the provided script:
-
-```request.py
-```
+Use the provided script: request.py
 
 ---
 
